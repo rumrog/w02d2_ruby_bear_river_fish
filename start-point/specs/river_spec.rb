@@ -11,4 +11,9 @@ class RiverTest < MiniTest::Test
     def setup()
         @river = River.new("Tay")
     end
+
+    def test_river_name()
+        assert_equal("Tay", @river.river_name())
+    end
+    
 end
