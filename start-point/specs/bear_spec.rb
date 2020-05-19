@@ -12,11 +12,15 @@ class BearTest < MiniTest::Test
         @bear = Bear.new("Bob")
     end
 
+    def test_can_create_bear()
+        assert_equal(Bear, @bear.class())
+    end
+
     def test_bear_name()
         assert_equal("Bob", @bear.bear_name())
     end
 
-    def test_bear_stomach()
+    def test_bear_stomach_starts_empty()
         assert_equal(0, @bear.bear_stomach())
     end
 

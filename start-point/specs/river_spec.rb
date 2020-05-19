@@ -10,6 +10,13 @@ class RiverTest < MiniTest::Test
 
     def setup()
         @river = River.new("Tay")
+        @fish1 = Fish.new("Salmon")
+        @fish2 = Fish.new("Carp")
+
+    end
+
+    def test_can_create_river()
+        assert_equal(River, @river.class())
     end
 
     def test_river_name()
@@ -19,5 +26,13 @@ class RiverTest < MiniTest::Test
     def test_count_of_bank_of_fish()
         assert_equal(0, @river.bank_of_fish())
     end
+
+    def test_add_fish_to_river()
+        @river.add_fish(@fish1)
+        @river.add_fish(@fish2)
+        assert_equal(2, @river.bank_of_fish())
+    end
+
+
 
 end
