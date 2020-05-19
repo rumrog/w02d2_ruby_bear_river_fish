@@ -4,7 +4,12 @@ class Bear
 
     def initialize(bear_name)
         @bear_name = bear_name
-        @hungry = []
+        @bear_stomach = []
     end
+
+    def bear_stomach()
+        return @bear_stomach.length()
+    end
+
 
 end
