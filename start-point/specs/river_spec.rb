@@ -33,6 +33,11 @@ class RiverTest < MiniTest::Test
         assert_equal(2, @river.bank_of_fish())
     end
 
-
-
+    def test_empty_river()
+        @river.add_fish(@fish1)
+        @river.add_fish(@fish2)
+        @river.empty_river()
+        assert_equal(0, @river.bank_of_fish())
+    end
+    
 end

@@ -11,5 +11,14 @@ class Bear
         return @bear_stomach.length()
     end
 
+    def bear_eats(fish_eaten)
+        @bear_stomach.push(fish_eaten)
+    end
 
+    # def bear_eats_from_river(river)
+    #     for fish in river.bank_of_fish()
+    #       bear_eats(fish)
+    #     end
+    #     river.empty_river()
+    #   end
 end

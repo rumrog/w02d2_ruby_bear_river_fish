@@ -15,4 +15,8 @@ class River
         @bank_of_fish.push(new_fish)
     end
 
+    def empty_river()
+       @bank_of_fish.clear()
+    end
+
 end
