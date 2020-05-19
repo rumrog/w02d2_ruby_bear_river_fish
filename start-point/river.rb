@@ -4,6 +4,11 @@ class River
 
     def initialize(river_name)
         @river_name = river_name
+        @bank_of_fish = []
+    end
+
+    def bank_of_fish()
+        return @bank_of_fish.length()
     end
 
 end

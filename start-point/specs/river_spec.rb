@@ -15,5 +15,9 @@ class RiverTest < MiniTest::Test
     def test_river_name()
         assert_equal("Tay", @river.river_name())
     end
-    
+
+    def test_count_of_bank_of_fish()
+        assert_equal(0, @river.bank_of_fish())
+    end
+
 end
