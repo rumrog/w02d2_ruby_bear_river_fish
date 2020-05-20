@@ -1,22 +1,22 @@
 class River
 
-    attr_reader :river_name
+    attr_reader :river_name, :fishes
 
-    def initialize(river_name)
+    def initialize(river_name, fishes = [])
         @river_name = river_name
-        @bank_of_fish = []
+        @fishes = fishes
     end
 
-    def bank_of_fish()
-        return @bank_of_fish.length()
+    def fishes_count()
+        return @fishes.length()
     end
 
     def add_fish(new_fish)
-        @bank_of_fish.push(new_fish)
+        @fishes.push(new_fish)
     end
 
     def empty_river()
-       @bank_of_fish.clear()
+       @fishes.clear()
     end
 
 end

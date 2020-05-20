@@ -37,15 +37,10 @@ class BearTest < MiniTest::Test
     # if the river has run out of fish
 
     def test_bear_eats_from_river__full()
-        @river1 = River.new("Tweed")
-        @river1.add_fish(@fish1)
-        @river1.add_fish(@fish2)
-        @bear.bear_eats_from_river(@river1)
+        river1 = River.new("Tweed", [@fish1, @fish2])
+        @bear.bear_eats_from_river(river1)
         assert_equal(2, @bear.bear_stomach())
-        assert_equal(0, @river1.bank_of_fish())
+        assert_equal(0, river1.fishes_count())
     end
-
-    # def test_bear_eats__empty_river
-    # end
 
 end

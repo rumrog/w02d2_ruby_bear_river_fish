@@ -17,7 +17,7 @@ class Bear
     end
 
     def bear_eats_from_river(river)
-        for fish in river.bank_of_fish()
+        for fish in river.fishes()
           bear_eats(fish)
         end
         river.empty_river()
